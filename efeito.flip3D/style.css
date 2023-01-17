@@ -1,0 +1,46 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: sans-serif;
+    font-size: 2em;
+    padding: 30px;
+    display: grid;
+    min-width: 100vh;
+    place-content: center;
+}
+
+.box{
+background: transparent;
+perspective: 700px;
+}
+
+.box__content{
+    background: pink;
+    position: relative;
+    width: 500px;
+    height: 500px;
+    transform-style: preserve-3d;
+    transform:  rotateY(0deg);
+    transition: transform 0.6s ease-in-out;
+}
+
+.box__front, .box__back{
+background: purple;
+position: absolute;
+width: 100%;
+height: 100%;
+backface-visibility: hidden;
+}
+
+.box__back{
+background: green;
+transform: rotateY(180deg);
+}
+
+.box:hover  .box__content{
+    
+        transform: rotateY(180deg);
+}

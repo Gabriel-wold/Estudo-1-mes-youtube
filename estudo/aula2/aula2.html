@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h1>lista de presença</h1>
+
+        <input type="text" id="txtTask"><br>
+        <button id="btn">alunos presentes na aula</button>
+
+        <ul>
+            <li>Gabriel</li>
+            <li>lucas</li>
+            <li>pedro</li>
+        </ul>
+
+    </div>
+    <script>
+        (function(){
+            'use strict';
+        
+            var $ul = document.querySelector('ul');
+            var $txtTask = document.querySelector('#txtTask');
+            var $btn = document.querySelector('#btn');
+
+            $btn.addEventListener('click',addtask);
+            $txtTask.addEventListener('keyup',function(e){
+
+                if(e.keyCode === 13){
+                    addtask();
+                }
+
+            })
+                
+                
+            function addtask(){
+                    var task ='<li>' + $txtTask.value + '</li>'; 
+                $ul.innerHTML += task;
+
+                $txtTask.value = '';
+                $txtTask.focus(); 
+                }
+               
+            
+        
+        })()
+
+    </script>
+</body>
+</html>

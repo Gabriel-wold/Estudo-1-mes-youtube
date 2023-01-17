@@ -1,0 +1,77 @@
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: aqua;
+}
+
+.calendario{
+
+    width: 300px;
+    height: auto;
+    background: #fff;
+    box-sizing: border-box;
+}
+
+.calendario .data{
+
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25px,2fr));
+    grid-gap: 10px;
+    box-sizing: border-box;
+}
+
+.calendario .data div {
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 25px;
+    color: #2b332c;
+}
+.calendario .data div.dia{
+
+    font-weight: 700;
+
+}
+
+.calendario .data div.dia:first-child,
+.calendario .data div.numero:nth-child(7n + 1){
+
+    color: rgb(214, 14, 14);
+    font-weight: 700;
+
+}
+
+.calendario .data div.numero.ativo{
+
+    background-color: #009688;
+    color:#fff;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.calendario .img{
+
+    width: 100%;
+    height: 250px;
+    background: url(dicas-de-veneza.webp);
+    background-size: cover;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+
+.calendario .img h2,
+.calendario .img h3{
+
+    margin: 0;
+    padding: 0;
+    color: #fff;
+
+}
